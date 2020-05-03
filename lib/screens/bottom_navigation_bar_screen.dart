@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/navigation_drawer.dart';
 import '../screens/categories_screen.dart';
 import '../screens/favorite_screen.dart';
 
@@ -28,6 +29,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
       appBar: AppBar(
           title: Text(_pages[_selectedPageIndex]['title']),
       ),
+      drawer: NavigationDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme.of(context).primaryColor,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/filters_screen.dart';
 import './screens/bottom_navigation_bar_screen.dart';
-//import './screens/tab_screen.dart';
 import './screens/meal_details_screen.dart';
 import './screens/category_meals_screen.dart';
 
@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => BottomNavigationBarScreen(),
         CategoryMealsScreen.SCREEN_ROUTE : (context) => CategoryMealsScreen(),
         MealDetailsScreen.SCREEN_ROUTE: (context) => MealDetailsScreen(),
+        FiltersScreen.RouteName: (context) => FiltersScreen(),
       },
 
       //if you want to change the home route key (/) 

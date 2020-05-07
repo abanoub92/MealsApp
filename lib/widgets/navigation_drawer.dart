@@ -45,13 +45,16 @@ class NavigationDrawer extends StatelessWidget {
           drawerItem(
             Icons.restaurant, 
             'Meals', 
-            () => Navigator.of(context).pushNamed('/'),
+            //pushReplacementNamed() to replace between two huge screens
+            //and to avoid infinitely growing stack of screens which could lead
+            //to memory problems
+            () => Navigator.of(context).pushReplacementNamed('/'),
           ),
 
           drawerItem(
             Icons.settings, 
             'Filters', 
-            () => Navigator.of(context).pushNamed(FiltersScreen.RouteName)
+            () => Navigator.of(context).pushReplacementNamed(FiltersScreen.RouteName)
           )
         ],
       ),
